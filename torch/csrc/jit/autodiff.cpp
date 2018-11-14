@@ -576,7 +576,7 @@ static void liftConstants(Gradient& grad_desc, ReverseDetails& rev_info) {
 
   // It's possible the we've cloned the same constants many times,
   // so we use CSE to deduplicate them.
-  EliminateCommonSubexpression(reverse_block);
+  EliminateCommonSubexpression(grad_desc.f);
 }
 
 // Takes a grad_desc.f returned from `addReverseInline` and splits off the
